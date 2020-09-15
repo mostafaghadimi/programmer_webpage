@@ -1,31 +1,34 @@
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import { Breadcrumb, Menu } from 'antd';
 import { HomeOutlined } from '@ant-design/icons'
 
-import styles from './navigation-ls.css'
 import './navigation-ls.css';
 
 export default class NavigationLS extends Component {
     
     render() {
         const menu = (
-            <Menu>
-              <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
-                  General
-                </a>
-              </Menu.Item>
-              <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
-                  Layout
-                </a>
-              </Menu.Item>
-              <Menu.Item>
-                <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
-                  Navigation
-                </a>
-              </Menu.Item>
-            </Menu>
+          <Menu>
+            <Menu.Item key={1}>
+              <Link to="/edu">
+                education
+              </Link>
+            </Menu.Item>
+
+            <Menu.Item key={2}>
+              <Link to="/skills" >
+                skills
+              </Link>
+            </Menu.Item>
+
+            <Menu.Item key={3}>
+              <Link to="/honors" >
+                honors
+              </Link>
+            </Menu.Item>
+          
+        </Menu>
         );
         return (
             <Fragment>
@@ -40,9 +43,9 @@ export default class NavigationLS extends Component {
                             </Breadcrumb.Item>
 
                             <Breadcrumb.Item overlay={menu}>
-                                <a href="">
+                                <Link to="/">
                                     info
-                                </a>
+                                </Link>
                             </Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
