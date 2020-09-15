@@ -5,6 +5,7 @@ import App from './app';
 
 import * as serviceWorker from './serviceWorker';
 import './assets/css/normalizer.css';
+import 'antd/dist/antd.css'
 
 
 ReactDOM.render(
