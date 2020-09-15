@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Typography, Tooltip } from 'antd';
-
-
+import { Button } from 'antd';
+import { DownloadOutlined } from '@ant-design/icons'
 
 import NavigationLS from '../navigation/navigation-ls'
 import './info-ls.css'
@@ -12,7 +12,7 @@ export default class InfoLS extends Component {
         return (
             <div className="info-container">
                 <NavigationLS/>
-                <div className="avatar">
+                <div className="avatar margin-top">
                     <img src={require("../../assets/images/photo.jpg")}/>
                 </div>
                 
@@ -27,7 +27,7 @@ export default class InfoLS extends Component {
                     </Title>
                 </div>
 
-                <div className="find-me">
+                <div className="find-me margin-top">
                     <div>
                         <Tooltip placement="top" title="linkedin account">
 
@@ -78,9 +78,15 @@ export default class InfoLS extends Component {
                         </Tooltip>
                     </div>
                 </div>
-
-                
-                
+                <div className="download-container margin-top">
+                    <Button
+                        type="primary"
+                        icon={<DownloadOutlined />}
+                        size="large"
+                    >
+                        Download App
+                    </Button>
+                </div>                
             </div>
         )
     }
