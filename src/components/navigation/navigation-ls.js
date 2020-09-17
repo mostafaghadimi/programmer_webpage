@@ -1,37 +1,37 @@
 import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { Breadcrumb, Menu } from 'antd';
 import { HomeOutlined } from '@ant-design/icons'
 
+import { makeMenu } from '../../redux/actions'
 import './navigation-ls.css';
 
-export default class NavigationLS extends Component {
+class NavigationLS extends Component {
+
     
     render() {
+        const urls = this.props.state
         const menu = (
           <Menu>
-            <Menu.Item key={1}>
-              <Link to="/edu">
-                education
-              </Link>
-            </Menu.Item>
-
-            <Menu.Item key={2}>
-              <Link to="/skills" >
-                skills
-              </Link>
-            </Menu.Item>
-
-            <Menu.Item key={3}>
-              <Link to="/honors" >
-                honors
-              </Link>
-            </Menu.Item>
-          
+            {
+      
+              urls.menu_urls.map((url, index) => 
+                <Menu.Item key={index}>
+                  <Link to={"/" + url}>
+                      {url}
+                  </Link>
+                </Menu.Item>
+              )
+            }
         </Menu>
         );
+        console.log(this.props.state)
+        // console.log(urls)
+        // console.log(urls.current_url)
         return (
-            <Fragment>
+          <Fragment>
+              {/* {console.log(this.props.state)} */}
                 <div className="nav">
                     <div className="pwd">
                         $PWD
@@ -57,3 +57,12 @@ export default class NavigationLS extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => ({
+  state: state.makeMenu
+})
+
+export default connect(
+  mapStateToProps,
+  { makeMenu }
+)(NavigationLS)

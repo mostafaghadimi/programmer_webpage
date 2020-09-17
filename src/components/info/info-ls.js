@@ -10,7 +10,7 @@ export default class InfoLS extends Component {
     render() {
         const { Title } = Typography;
         return (
-            <div className="info-container">
+            <div className="container">
                 <NavigationLS/>
                 <div className="avatar margin-top">
                     <img src={require("../../assets/images/photo.jpg")}/>

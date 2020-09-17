@@ -1,7 +1,13 @@
+// react
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// redux
+import store from './redux/store.js';
+import { Provider } from 'react-redux'
+
 import App from './app';
+
 
 import * as serviceWorker from './serviceWorker';
 import './assets/css/normalizer.css';
@@ -9,7 +15,10 @@ import 'antd/dist/antd.css'
 
 
 ReactDOM.render(
-  <App/>,
+  <Provider store={store}>
+    <App/>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 
