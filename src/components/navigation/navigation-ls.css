@@ -1,0 +1,23 @@
+.nav {
+    display: grid;
+    grid-template-columns: 80px auto;
+    margin: 10px auto;
+}
+
+.pwd {
+    background-color: #007daf;
+    text-align: center;
+    display: block;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+}
+
+.breadcrumb {
+    background: #f8f8f8;
+    border-radius: 0 5px 5px 0;
+}
+
+.pwd, .breadcrumb {
+    padding: 15px;
+}

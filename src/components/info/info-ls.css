@@ -1,0 +1,87 @@
+.container {
+  width: 60%;
+  margin: auto;
+}
+
+/* .line-1 {
+  position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 3px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+} */
+
+/* Animation */
+/* .anim-typewriter {
+  animation: typewriter 3s steps(33) 1s 1 normal both,
+    blinkTextCursor 700ms steps(33) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: #ffffffbf;
+  }
+  to {
+    border-right-color: #007dafbf;
+
+  }
+} */
+
+.avatar {
+  width: 350px;
+  margin: auto;
+}
+
+.avatar > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 350px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.biography {
+  text-align: center;
+}
+
+.biography h1 mark,
+.biography h4 {
+  font-weight: 280 !important;
+}
+
+.ant-typography + h1.ant-typography,
+.ant-typography + h2.ant-typography,
+.ant-typography + h3.ant-typography,
+.ant-typography + h4.ant-typography,
+.ant-typography + h5.ant-typography {
+  margin-top: 2px !important;
+}
+
+
+.find-me {
+  text-align: center;
+  display: grid;
+  width: 350px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.download-container {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 20px;
+}
